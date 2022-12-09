@@ -3,4 +3,4 @@ a = input()
 print('Введите b');
 b = input()
 print(a, b)
-print('{} -- {}'.fotmat(a, b))
+print('{} -- {}'.format(a, b))
