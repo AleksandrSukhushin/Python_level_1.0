@@ -4,7 +4,7 @@
 # 0,56 -> 11
 
 # Не удавшееся решение через цикл while:
-# num = float(input('Введите вещественное число: '))
+# num = input('Введите вещественное число: ')
 # sum = 0
 # while num != 0:
 #     sum += num % 10
@@ -12,11 +12,13 @@
 # print(int(sum))
 
 # Спустя какое-то время пришел к простейшему решению:
+
 num = input('Введите вещественное число: ')
 sum = 0
 for i in num:
     if i != '.':
         sum += int(i)
 print(f'Сумма цифр в числе {num} = {sum}')
+
 # print(type(num))
 # print(type(sum))
