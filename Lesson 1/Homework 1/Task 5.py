@@ -17,5 +17,5 @@ import math
 first = input('Введите координаты точки А через пробел: ').split(' ')
 second = input('Введите координаты точки B через пробел: ').split()
 distance = (float(first[0]) - float(second[0]))**2 + (float(first[1]) - float(second[1]))**2
-print(f'Расстояние между точками = {round(math.sqrt(distance), 2)}')
-# print(f'Расстояние между точками = {round((distance**0.5), 2)}')
+# print(f'Расстояние между точками = {round(math.sqrt(distance), 2)}')
+print(f'Расстояние между точками = {round((distance**0.5), 2)}')
