@@ -5,9 +5,11 @@
 
 import random
 
+length = int(input('Введите длину списка: '))
 my_list = []
+new_list = []
 
-for _ in range(10):
+for i in range(length):
     amount = random.randint(0,3)
     number = round(random.uniform(0,10), amount)
     if number == int(number):
@@ -15,4 +17,10 @@ for _ in range(10):
     else:
         my_list.append(number)
 
-print(my_list)
+for i in my_list:
+    if i % 1 != 0:
+        new_list.append(round(i % 1, 3))
+difference = round(max(new_list) - min(new_list), 3)
+
+print(f'Исходный список: {my_list}\nДробная часть элементов из списка: {new_list}')
+print(f'Разница между наибольшим и наименьшим значениями дробной части элементов списка: {difference}')
