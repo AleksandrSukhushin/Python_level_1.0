@@ -3,3 +3,12 @@
 # 45 -> 101101
 # 3 -> 11
 # 2 -> 10
+
+number = int(input('Введите десятичное число n: '))
+count = ""
+
+while number != 0:
+    count = str(number % 2) + count
+    number //= 2
+
+print(f'Число n в двоичном выражении: {count}')
