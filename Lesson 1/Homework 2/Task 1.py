@@ -12,13 +12,19 @@
 # print(int(sum))
 
 # Спустя какое-то время пришел к простейшему решению:
-
-num = input('Введите вещественное число: ')
-sum = 0
-for i in num:
-    if i != '.':
-        sum += int(i)
-print(f'Сумма цифр в числе {num} = {sum}')
-
+# num = input('Введите вещественное число: ')
+# sum = 0
+# for i in num:
+#     if i != '.':
+#         sum += int(i)
+# print(f'Сумма цифр в числе {num} = {sum}')
 # print(type(num))
 # print(type(sum))
+
+# Разбор решения с преподавателем
+number = 'gerfbdg43556'
+summa = 0
+for char in number:
+    if char.isdigit():
+        summa += int(char)
+print(summa)
