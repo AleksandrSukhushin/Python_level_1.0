@@ -14,7 +14,7 @@
 # print(my_dict)
 
 
-my_list = 'A*x**2 + B*x + C = 0'
+my_list = '32*x**2 + 4*x + -6 = 0'
 
 new_list = my_list.replace(' ', '').replace('=0', '')
 new_list = new_list.split('+')
@@ -24,3 +24,13 @@ for i in new_list:
     my_new_list.append(i.split('*x')[0])
 
 print(my_new_list)
+
+from math import sqrt
+
+def roots_equ(a, b, c):
+    d = b**2 - 4*a*c
+    x1 = (-b + sqrt(d))/a*2
+    x2 = (-b + sqrt(d))/a*2
+    return d, x1, x2
+
+print(roots_equ(my_list[0], my_list[1], my_list[2]))
