@@ -18,7 +18,6 @@
 # data.close()
 # exit()
 
-
 # import Lecture 1 as h
 # print(h.f(1))
 
