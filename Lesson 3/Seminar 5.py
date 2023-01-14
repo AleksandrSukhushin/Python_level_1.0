@@ -18,11 +18,9 @@
 # Найдите это число.
 
 # path = r'Lesson 3\file.txt'
-
 # with open(path, 'r') as data:
 #     my_list = data.read().split()
 # print(my_list)
-
 # my_list = list(map(int, my_list))
 # print(my_list)
 # my_list = [my_list[x]-1 for x in range(1, len(my_list)) if my_list[x] - 1 != my_list[x-1]]
