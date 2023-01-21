@@ -22,9 +22,10 @@
 # print(type(sum))
 
 # Разбор решения с преподавателем
-number = 'gerfbdg43556'
-summa = 0
-for char in number:
-    if char.isdigit():
-        summa += int(char)
-print(summa)
+data = input('Введите данные: ')
+# summa = []
+# for char in number:
+#     if char.isdigit():
+#         summa += int(char)
+# print(summa)
+print(sum([int(x) for x in data if x.isdigit()]))

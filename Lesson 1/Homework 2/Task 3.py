@@ -15,6 +15,7 @@
 # Разбор с преподавателем:
 import random
 my_list = []
+
 def my_shuffle(my_list: list):
     new_list = []
     while len(my_list) > 0:
