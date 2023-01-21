@@ -12,6 +12,7 @@
 #             print(X, Y, Z)
 
 # Разбор задания с преподавателем:
+
 flag = True
 for x in [True, False]:
     for y in [True, False]:
