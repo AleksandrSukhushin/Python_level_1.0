@@ -3,7 +3,7 @@
 # Пример:
 # [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
-import random
+from random import *
 
 length = int(input('Введите длину списка: '))
 my_list = []
