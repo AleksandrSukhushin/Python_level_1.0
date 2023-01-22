@@ -1,3 +1,5 @@
+# Модуль описания модели программы
+
 phone_book = []
 path = 'Lesson 4\Seminar 7 - Phonebook\data.txt'
 

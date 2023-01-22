@@ -1,3 +1,5 @@
+# Модуль управления функционалом
+
 import view
 import model
 
