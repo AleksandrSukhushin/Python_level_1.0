@@ -1,35 +1,3 @@
-# f(x) = -12x**4*sin(cos(x)) - 18x**3+5x**2 + 10x - 30
-
-# 1. Определить корни
-# 2. Найти интервалы, на которых функция возрастает
-# 3. Найти интервалы, на которых функция убывает
-# 4. Построить график
-# 5. Вычислить вершину
-# 6. Определить промежутки, на котором f > 0
-# 7. Определить промежутки, на котором f < 0
-
-# Построил график изначально самостоятельно при помощи материала предыдущего занятия и немного документации из библиотек
-# import matplotlib.pyplot as plt
-# import numpy as np
-
-# def func(x):
-#     return -12*x**4*np.sin(np.cos(x)) - 18*x**3+5*x**2 + 10*x - 30
-
-# x = np.linspace(-10, 10, 1000)
-# y = [func(x) for x in x]
-
-# plt.plot(x, y, 'r')
-# plt.xlabel('x')
-# plt.ylabel('y')
-# plt.title('График функции: -12*x**4*sin(cos(x)) - 18*x**3+5x**2 + 10x - 30')
-# plt.grid(True)
-# plt.show()
-
-
-
-
-# Но далее возникли проблемы с нахождением корней и тд, поэтому решил все-таки перейти в просмотру семинара
-# Единственное, что сделал, поигрался с визуалом графика
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -42,6 +10,7 @@ direct_up = True
 a, b, c, d, e = -12, -18, 5, 10, -30
 
 x = np.arange(-limit, limit, step)
+
 
 def switch_color():
     global color
@@ -109,17 +78,16 @@ roots = []
 for x in x_change:
     if x[1] == 'zero':
         roots.append(str(round(x[0], 2)))
-        plt.plot(x[0], func(x[0]), 'yo')
+        plt.plot(x[0], func(x[0]), 'gx')
 
-plt.plot(min_x, min_y, 'go', label = f'Экстремум функции: ({round(min_x, 2)}, {round(min_y, 2)})')
-plt.plot(0, 0, 'yo', label = 'Корни функции:\n'
-                                  f'({", ".join(roots)})')
+plt.plot(min_x, min_y, 'yo', label=f'Экстремум функции на промежутке [{-limit};{limit}]: ({round(min_x, 2)}, {round(min_y, 2)})')
+
 plt.rcParams['lines.linestyle'] = '-'
-plt.plot(0, 0, 'b', label = 'Убывание > 0')
-plt.plot(0, 0, 'r', label = 'Возрастание > 0')
+plt.plot(0, 0, 'b', label='Убывание > 0')
+plt.plot(0, 0, 'r', label='Возрастание > 0')
 plt.rcParams['lines.linestyle'] = '--'
-plt.plot(0, 0, 'b', label = 'Убывание < 0')
-plt.plot(0, 0, 'r', label = 'Возрастание < 0')
-plt.title(f'График f(x) = -12x^4sin(cos(x)) - 18x^3+5x^2 + 10x - 30')
+plt.plot(0, 0, 'b', label='Убывание < 0')
+plt.plot(0, 0, 'r', label='Возрастание < 0')
+plt.title(f'Корни на промежутке [{-limit};{limit}]: {", ".join(roots)}')
 plt.legend()
 plt.show()
